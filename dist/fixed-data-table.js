@@ -1,5 +1,5 @@
 /**
- * FixedDataTable v0.8.3 
+ * FixedDataTable v0.8.4 
  *
  * Copyright Schrodinger, LLC
  * All rights reserved.
@@ -2826,7 +2826,7 @@ var FixedDataTableRoot = {
   Table: _FixedDataTable2.default
 };
 
-FixedDataTableRoot.version = '0.8.3';
+FixedDataTableRoot.version = '0.8.4';
 module.exports = FixedDataTableRoot;
 
 /***/ }),
