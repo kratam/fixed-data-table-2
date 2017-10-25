@@ -88,10 +88,11 @@ var FixedDataTableCellGroupImpl = createReactClass({
     var currentPosition = 0;
     for (var i = 0, j = columns.length; i < j; i++) {
       var columnProps = columns[i].props;
+      var recycleOffsetLeft = columnProps.recycleOffsetLeft && columnProps.recycleOffsetLeft[props.rowIndex] || 0;
       var recycable = columnProps.allowCellsRecycling && !isColumnReordering;
       if (!recycable || (
             currentPosition - props.left <= props.width &&
-            currentPosition - props.left + columnProps.width >= 0)) {
+            currentPosition - props.left + columnProps.width + recycleOffsetLeft >= 0)) {
         var key = columnProps.columnKey || 'cell_' + i;
         cells[i] = this._renderCell(
           props.rowIndex,
